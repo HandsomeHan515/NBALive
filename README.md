@@ -1,6 +1,6 @@
 ### 使用
-- npm start
 - npm install 
+- npm start
 ```
 my-app/
   README.md
