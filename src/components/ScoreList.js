@@ -34,7 +34,7 @@ class ScoreList extends Component {
         {
           this.state.Data.map((e, i) => {
             return (
-              <li className="score-list">
+              <li key={i} className="score-list">
                 <div>
                   <Team team={e.name1} />
                   <span>VS</span>
