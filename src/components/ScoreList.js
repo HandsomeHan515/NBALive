@@ -6,27 +6,26 @@ import { ScoreData } from '../data/Msg'
 
 class ScoreList extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       Data: ScoreData
     }
-    this.as = this.as.bind(this)
   }
 
-  as(item, val) {
+  as = (item, val) => {
     let newData = this.state.Data.slice()
-    newData[item].score1 = newData[item].score1 + val
-    if(newData[item].score1 > 88) {
+    newData[item].score1 += val
+    if (newData[item].score1 > 88) {
       alert('已到达最大值！！！')
       newData[item].score1 = 88
-    }else if(newData[item].score1 < 76){
+    } else if (newData[item].score1 < 76) {
       alert('已到达最小值！！！')
-      newData[item].score1 =76
+      newData[item].score1 = 76
     }
     this.setState({
       Data: newData
     })
-    
+
   }
 
   render() {
@@ -55,7 +54,7 @@ class ScoreList extends Component {
           })
         }
       </ul>
-    );
+    )
   }
 }
 

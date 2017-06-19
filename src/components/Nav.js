@@ -10,7 +10,7 @@ class Nav extends Component {
         {
           NavData.map((e, i) => {
             return (
-              <li className="nav-list">
+              <li key={i} className="nav-list">
                 <Link className="nav-list-a" activeClassName="nav-active" onlyActiveOnIndex={true} to={e.link}>
                   {e.name}
                 </Link>
