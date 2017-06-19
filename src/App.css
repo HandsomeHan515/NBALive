@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  background: #ccc;
+}
+
+.nav-list {
+  float: left;
+  width: 50%;
+  line-height: 50px;
+  text-align: center;
+}
+
+.nav-list-a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+}
+.nav-active {
+  color: red;
+}
+
+.team {
+  position: relative;
+  width: 50%;
+  margin: 20px auto 0;
+  padding: 20px 20px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.team-list {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.addTeam {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  margin-top: -25px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 5px;
+  color: #ccc;
+  background: #999;
+}
+
+.addTeam:hover {
+  background: #ccc;
+  color: #333;
+}
+
+.score {
+  position: relative;
+  width: 50%;
+  margin: 20px auto 0;
+  padding: 20px 20px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.score-list {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.score-list div:nth-child(1), .score-list div:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.add, .sub {
+  font-size: 30px;
+}
