@@ -8,31 +8,31 @@ class ScoreList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      Data: ScoreData
+      score: ScoreData
     }
   }
 
   as = (item, val) => {
-    let newData = this.state.Data.slice()
-    newData[item].score1 += val
-    if (newData[item].score1 > 88) {
+    let newScore = this.state.score.slice()
+    newScore[item].score1 += val
+    if (newScore[item].score1 > 88) {
       alert('已到达最大值！！！')
-      newData[item].score1 = 88
-    } else if (newData[item].score1 < 76) {
+      newScore[item].score1 = 88
+    } else if (newScore[item].score1 < 76) {
       alert('已到达最小值！！！')
-      newData[item].score1 = 76
+      newScore[item].score1 = 76
     }
-    this.setState({
-      Data: newData
-    })
 
+    this.setState({
+      score: newScore
+    })
   }
 
-  render() {
+  render () {
     return (
       <ul className="score">
         {
-          this.state.Data.map((e, i) => {
+          this.state.score.map((e, i) => {
             return (
               <li key={i} className="score-list">
                 <div>

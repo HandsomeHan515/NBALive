@@ -7,27 +7,28 @@ class TeamList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      Data: TeamData
+      teams: TeamData
     }
   }
 
   insert = () => {
-    var newTeam = prompt('请输入球队的名字')
-    this.state.Data.unshift({ name: newTeam })
-    let newTeamData = this.state.Data.slice()
+    let newTeam = prompt('请输入球队的名字')
+    let newTeams = this.state.teams.slice()
+    newTeams.unshift({ name: newTeam })
+
     if (newTeam) {
       this.setState({
-        Data: newTeamData
+        teams: newTeams
       })
     }
   }
 
-  render() {
+  render () {
     return (
       <div>
         <ul className="team">
           {
-            this.state.Data.map((e, i) => {
+            this.state.teams.map((e, i) => {
               return (
                 <li key={i} className="team-list">
                   <Team team={e.name} />
